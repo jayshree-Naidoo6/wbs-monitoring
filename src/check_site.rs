@@ -90,11 +90,11 @@ fn parse_options () -> Option<Opts> {
 			"",
 			"header",
 			"Request header to send, such as 'Name: value'",
-			"HEADER");
+			"<HEADER>");
 
 	let matches = match opts.parse (args) {
 		Ok (m) => { m }
-		Err (_) => {
+		Err (_) => { 
 			print_usage ("check_site", opts);
 			process::exit(3);
 		}
